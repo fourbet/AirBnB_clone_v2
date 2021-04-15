@@ -6,7 +6,9 @@ from datetime import datetime
 import os
 from fabric.api import env
 
+
 env.hosts = ['35.196.143.91', '35.243.151.189']
+
 
 def do_deploy(archive_path):
     """deploy a .tgz archive"""
