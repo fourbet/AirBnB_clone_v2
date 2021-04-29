@@ -19,7 +19,7 @@ class State(BaseModel, Base):
         def cities(self):
             """Getter for cities when using FileStorage mode"""
             ret = []
-            for c in models.storage.all(City):
+            for c in models.storage.all(City).values():
                 if c.state_id == self.id:
                     ret.append(c)
             return ret
