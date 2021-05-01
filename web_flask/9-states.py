@@ -4,7 +4,6 @@ from flask import Flask
 from flask import render_template
 from models import storage
 from models.state import State
-
 app = Flask(__name__)
 
 
@@ -23,6 +22,7 @@ def states_list(id=None):
     else:
         states = states.values()
     return render_template('9-states.html', st_storage=states, id=id)
+
 
 @app.teardown_appcontext
 def teardown(exception):
